@@ -1,0 +1,45 @@
+.app-header{
+    background-color: #263238;
+    height: 36px;
+    padding: 8px 32px 8px 16px;
+
+}
+
+.logo{
+    float: left;
+    color: #fff;
+    font-size: 18px;
+    text-align: center; 
+    margin-top: 5px;
+}
+
+.login-card{
+    position: absolute;
+     width: 300px;
+     height: 200px; 
+     z-index: 15;
+     top: 50%;
+     left: 50%;
+     margin: -100px 0 0 -150px;
+}
+
+ .login-header{
+    padding: 25px 15px 0px;
+    font-weight: 500;
+} 
+
+.login-button{
+    margin: 10% 10% 5% 0% !important;
+}
+
+.dispNone{
+    display: none;
+}
+
+.red{
+    color: red;
+}
+
+.dispBlock{
+    display: block;
+}
