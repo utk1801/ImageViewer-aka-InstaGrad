@@ -1,0 +1,41 @@
+.site-header {
+  background-color: #263238;
+  padding: 16px 16px 16px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-logo {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.avatar {
+  margin: 10;
+  cursor: pointer;
+}
+
+#simple-menu ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.header-full-right {
+  display: flex;
+}
+
+.searchfield {
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  width: 300px !important;
+  border-radius: 4px !important;
+  background-color: #c0c0c0 !important;
+  margin-right: 16px;
+}
+
+.searchfield .formControl {
+  margin-left: 4px;
+}
