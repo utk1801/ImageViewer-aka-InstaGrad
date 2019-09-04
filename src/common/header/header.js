@@ -52,7 +52,7 @@ class Header extends Component {
     super(props);
     this.state = {
       loggedIn: sessionStorage.getItem("access-token") == null ? false : true,
-      accessToken: "13805614664.279ad47.b8709f2ffd8641f2aeccd207f5195480",
+      accessToken: "",
       open: false,
       anchorEl: null,
       searchCaption: ""
