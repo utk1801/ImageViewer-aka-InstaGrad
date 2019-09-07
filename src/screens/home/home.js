@@ -11,7 +11,7 @@ import Avatar from "@material-ui/core/Avatar";
 import Favorite from "@material-ui/icons/Favorite";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import * as moment from "moment";
+//import * as moment from "moment";
 
 import Button from "@material-ui/core/Button";
 import FormControl from "@material-ui/core/FormControl";
@@ -155,11 +155,11 @@ class Home extends Component {
   };
 
   //Format Data
-  getPeriod = _milliseconds => {
+  /* getPeriod = _milliseconds => {
     return moment(new Date(parseInt(_milliseconds))).format(
       "DD/MM/YY hh:mm:ss"
     );
-  };
+  }; */
 
   //On Comment Text Field Change
   inputAddCommentChangeHandler = (i, event) => {
