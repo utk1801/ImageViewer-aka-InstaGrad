@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Home from './home/home';
+import Home from './home/Home';
 import Login from './login/Login';
-//import Profile from './profile/Profile';
+import Profile from './profile/Profile';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import  RestrictRouting  from '../common/RestrictRouting';
 
@@ -30,12 +30,12 @@ class RouterControl extends Component {
                   component={Home} 
                   baseUrl = {this.baseUrl}
                   /> 
-              {/* <RestrictRouting 
+              { <RestrictRouting 
                 exact 
                 path='/profile' 
                 component={Profile} 
                 baseUrl = {this.baseUrl}
-                /> */}
+                /> }
             </Switch>
         </div>
       </Router>

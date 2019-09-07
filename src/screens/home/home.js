@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./home.css";
-import Header from "../../common/header/header";
+import "./Home.css";
+import Header from "../../common/header/Header";
 import Container from "@material-ui/core/Container";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
@@ -11,7 +11,7 @@ import Avatar from "@material-ui/core/Avatar";
 import Favorite from "@material-ui/icons/Favorite";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-//import * as moment from "moment";
+import * as moment from "moment";
 
 import Button from "@material-ui/core/Button";
 import FormControl from "@material-ui/core/FormControl";
@@ -65,6 +65,7 @@ class Home extends Component {
       "GET",
       this.props.baseUrl + "users/self/?access_token=" + this.state.access_token
     );
+    //xhrUserProfile.setRequestHeader("Cache-Control", "no-cache");
     xhrUserProfile.send(dataUserProfile);
 
     // Get user posts
@@ -85,6 +86,7 @@ class Home extends Component {
         "users/self/media/recent?access_token=" +
         this.state.access_token
     );
+    //xhrUserPosts.setRequestHeader("Cache-Control", "no-cache");
     xhrUserPosts.send(dataUserPosts);
   };
 
@@ -155,17 +157,33 @@ class Home extends Component {
   };
 
   //Format Data
-  /* getPeriod = _milliseconds => {
+  getPeriod = _milliseconds => {
     return moment(new Date(parseInt(_milliseconds))).format(
-      "DD/MM/YY hh:mm:ss"
+      "DD/MM/YY HH:mm:ss"
     );
-  }; */
+  };
 
   //On Comment Text Field Change
   inputAddCommentChangeHandler = (i, event) => {
     let addNewComment = [...this.state.addNewComment];
     addNewComment[i] = event.target.value;
     this.setState({ addNewComment });
+    //   this.setState({ addNewComment: event.target.value });
+    //  if(_index==0){
+    //   this.setState({ addNewComment: event.target.value });sss
+    //  }
+
+    // let _userPostsDetails = JSON.parse(
+    //   JSON.stringify(this.state.userPostsDetails)
+    // );
+
+    // _userPostsDetails.map((post, index) => {
+    //   if (post.id === _id) {
+
+    //     this.setState({ addNewComment: event.target.value });
+    //   }
+
+    // });
   };
 
   //OnClick Add Comment
@@ -208,6 +226,15 @@ class Home extends Component {
           filterPostsDetails: [..._filteredPosts],
           addNewComment: ""
         });
+        // let _userPosts = this.state.userPosts;
+        // const _selectedIndex = this.state.selectedIndex;
+        // _userPosts[_selectedIndex] = _selectedPostItem;
+
+        // this.setState({
+        //     selectedPost: _selectedPostItem,
+        //     userPosts: _userPosts,
+        //     addNewComment: ''
+        // });
       }
     }
   };
@@ -237,6 +264,7 @@ class Home extends Component {
                     }
                     title={post.user.username}
                     subheader={this.getPeriod(post.created_time)}
+                    // subheader={post.created_time.toLocaleDateString()}
                   />
                   <CardMedia
                     className="classes.media"
@@ -338,10 +366,12 @@ class Home extends Component {
                               key={index}
                               id="addcomment"
                               type="text"
+                              //onChange={this.handleChange.bind(this, post.id)}
                               onChange={this.inputAddCommentChangeHandler.bind(
                                 this,
                                 index
                               )}
+                              // onChange={(e) => {this.inputAddCommentChangeHandler(e,post.id,index)}}
                               value={this.state.addNewComment || ""}
                             />
                           </FormControl>
