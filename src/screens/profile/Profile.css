@@ -1,0 +1,19 @@
+.modal-heading {
+  margin-bottom: 16px !important;
+}
+.grid-content {
+  cursor: pointer;
+}
+
+.redLike {
+  color: red;
+  cursor: pointer;
+}
+.greyLike {
+  color: grey;
+  cursor: pointer;
+}
+.min-height-comments-box {
+  min-height: 50px;
+  margin-bottom: 20px;
+}

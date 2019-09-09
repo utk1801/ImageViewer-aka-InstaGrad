@@ -1,12 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
 import RouterControl from "./screens/RouterControl";
-/* ReactDOM.render(
-    <span>
-        Image Viewer
-    </span>, 
-    document.getElementById('root')
-);
- */
+//Router Controller for Controlling the routing of Components
 ReactDOM.render(<RouterControl />, document.getElementById("root"));

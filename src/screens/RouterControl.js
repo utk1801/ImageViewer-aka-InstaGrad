@@ -30,12 +30,12 @@ class RouterControl extends Component {
                   component={Home} 
                   baseUrl = {this.baseUrl}
                   /> 
-              { <RestrictRouting 
+              <RestrictRouting 
                 exact 
                 path='/profile' 
                 component={Profile} 
                 baseUrl = {this.baseUrl}
-                /> }
+                />
             </Switch>
         </div>
       </Router>
